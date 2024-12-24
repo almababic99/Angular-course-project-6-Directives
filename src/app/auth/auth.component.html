@@ -1,0 +1,22 @@
+<h2>Authenticate to access all resources</h2>
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <label>E-Mail</label>
+    <input type="email" name="email" [(ngModel)]="email" />
+  </p>
+
+  <p>
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="password" />
+  </p>
+
+  <p>
+    <button>Login</button>
+  </p>
+</form>
+
+<!-- ngModel is a built-in directive that binds an input element's value to a property in the component's class. -->
+<!-- This directive helps in two-way data binding, which means that when the input value changes, the bound property in the component is updated, and vice versa. -->
+<!-- [(ngModel)]="email": This binds the input field's value to the email property in your component. The two-way binding means that whenever the user types in the input field, the email property will be updated automatically. 
+ Similarly, if the email property is changed programmatically in the component, the input field will reflect that change. -->
+<!-- [(ngModel)]="password": Similarly, this binds the input field for the password to the password property in your component. -->
