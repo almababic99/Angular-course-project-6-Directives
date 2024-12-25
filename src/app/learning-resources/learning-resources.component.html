@@ -3,10 +3,12 @@
 
 <ul>
   <li>
-    <a href="https://angular.dev" appSafeLink>Angular Documentation</a>   <!-- The appSafeLink directive  modifies the behavior of the <a> tag to apply additional functionality -->
+    <a href="https://angular.dev" appSafeLink="myapp-docs-link">Angular Documentation</a>   
+    <!-- The appSafeLink directive modifies the behavior of the <a> tag to apply additional functionality (onConfirmLeavePage from safe-link.directive.ts where queryParam becomes 'myapp-docs-link') -->
   </li>
   <li>
-    <a href="https://academind.com/courses">Academind Courses</a>
+    <a href="https://academind.com/courses" appSafeLink="myapp-courses-link">Academind Courses</a>
+    <!-- The appSafeLink directive modifies the behavior of the <a> tag to apply additional functionality (onConfirmLeavePage from safe-link.directive.ts where queryParam becomes 'myapp-courses-link') -->
   </li>
   <li>
     <a href="https://www.google.com/search?q=angular">Google</a>
