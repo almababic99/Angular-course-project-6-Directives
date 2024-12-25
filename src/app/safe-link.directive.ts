@@ -1,12 +1,17 @@
 import { Directive, ElementRef, inject, input } from "@angular/core";
+import { LogDirective } from "./log.directive";
 
-@Directive({
+@Directive({  // this is a custom Attribute Directive
     selector: 'a[appSafeLink]',
     standalone: true,
     host: {
         '(click)': 'onConfirmLeavePage($event)'
-    }
+    },
     // The host property in the directive is used to attach the click event listener to the <a> tag.
+    hostDirectives: [LogDirective]
+    // hostDirectives is an Angular feature used to apply additional directives to the host element of a directive. The host element refers to the DOM element the directive is applied to. 
+    // the SafeLinkDirective is applied to <a> (anchor) elements with the appSafeLink attribute.
+    // The hostDirectives: [LogDirective] part means that you are attaching the LogDirective to the same host element (<a>), alongside the logic in the SafeLinkDirective.
 })
 
 // selector: 'a[appSafeLink]' -> The selector defines the target element in the DOM that the directive will be applied to. It tells Angular to apply the directive to all <a> (anchor) elements that have the appSafeLink attribute.
